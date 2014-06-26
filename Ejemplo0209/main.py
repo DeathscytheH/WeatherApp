@@ -11,7 +11,7 @@ import json
 class AddLocationForm(BoxLayout):
     search_input = ObjectProperty()
     def search_location(self):
-        search_template="http://api.openweathermap.org/data/2.5/" + "find?q={}&type=like"
+        search_template="http://api.openweathermap.org/data/2.5/find?q={}&type=like"
         search_url=search_template.format(self.search_input.text)
         request=UrlRequest(search_url, self.found_location)
 
